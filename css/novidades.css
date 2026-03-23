@@ -1,0 +1,188 @@
+.novidades-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  color: #c65d3d;
+  padding: 40px 20px;
+  position: relative;
+  text-align: center;
+}
+
+.novidades-container h1{
+  font-family: "Cormorant";
+  font-size: 90px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.subtitulo{
+  letter-spacing: 6px;
+  font-size: 20px;
+}
+
+.novidades-box{
+  border: 2px solid #c65d3d;
+  border-radius: 30px;
+  padding: 40px 60px;
+  max-width: 700px;
+  width: 100%;
+  margin-top: -10px;
+  text-align: left;
+}
+
+.novidade{
+  margin-bottom: 30px;
+}
+
+.novidade h2{
+  font-family: "Cormorant";
+  font-size: 35px;
+  margin-bottom: 5px;
+  line-height: 1.1;
+}
+
+.data{
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.novidade p{
+  line-height: 1.6;
+}
+
+.voltar{
+  color: #c65d3d;
+  text-decoration: underline;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.voltar:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px){
+  .novidades-container h1{
+    font-size: 74px;
+  }
+
+  .subtitulo{
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+
+  .novidades-box{
+    max-width: 650px;
+    padding: 35px 32px;
+  }
+
+  .novidade h2{
+    font-size: 32px;
+  }
+
+  .voltar{
+    left: 24px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px){
+  .novidades-container{
+    justify-content: flex-start;
+    padding: 90px 16px 40px;
+    gap: 18px;
+  }
+
+  .novidades-container h1{
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+
+  .subtitulo{
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+  }
+
+  .novidades-box{
+    padding: 28px 22px;
+    border-radius: 22px;
+    margin-top: 8px;
+  }
+
+  .novidade{
+    margin-bottom: 26px;
+  }
+
+  .novidade h2{
+    font-size: 30px;
+  }
+
+  .data{
+    font-size: 13px;
+  }
+
+  .novidade p{
+    font-size: 17px;
+  }
+
+  .voltar{
+    top: 20px;
+    left: 16px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px){
+  .novidades-container{
+    padding: 76px 14px 30px;
+    gap: 14px;
+  }
+
+  .novidades-container h1{
+    font-size: 42px;
+  }
+
+  .subtitulo{
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    max-width: 300px;
+  }
+
+  .novidades-box{
+    padding: 22px 16px;
+    border-radius: 18px;
+  }
+
+  .novidade{
+    margin-bottom: 22px;
+  }
+
+  .novidade h2{
+    font-size: 24px;
+  }
+
+  .data{
+    font-size: 12px;
+  }
+
+  .novidade p{
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .voltar{
+    top: 14px;
+    left: 14px;
+    font-size: 16px;
+  }
+}

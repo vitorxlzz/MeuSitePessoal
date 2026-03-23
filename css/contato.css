@@ -1,0 +1,275 @@
+.contato-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  padding: 40px 60px;
+  color: #c65d3d;
+  position: relative;
+}
+
+.contato-esquerda {
+  max-width: 520px;
+  width: 100%;
+}
+
+.contato-esquerda h1 {
+  font-family: "Cormorant", serif;
+  font-size: 95px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  font-size: 14px;
+  letter-spacing: 6px;
+  margin-bottom: 35px;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-contato label {
+  font-size: 16px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  border: 1.5px solid #c65d3d;
+  border-radius: 18px;
+  background: transparent;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #c65d3d;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+
+.form-contato textarea {
+  resize: none;
+}
+
+.form-contato button {
+  width: fit-content;
+  border: 1.5px solid #c65d3d;
+  background: transparent;
+  color: #c65d3d;
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.form-contato button:hover {
+  opacity: 0.75;
+}
+
+.contato-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contato-box {
+  border: 1.5px solid #c65d3d;
+  border-radius: 30px;
+  padding: 30px 35px;
+  min-width: 320px;
+}
+
+.contato-box h2 {
+  font-family: "Cormorant", serif;
+  font-size: 46px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.contato-box ul {
+  list-style: disc;
+  padding-left: 22px;
+}
+
+.contato-box li {
+  margin-bottom: 12px;
+}
+
+.contato-box a {
+  color: #c65d3d;
+}
+
+.mensagem-enviada{
+display:none;
+margin-top:15px;
+font-size:16px;
+}
+
+.voltar{
+color:#c65d3d;
+text-decoration:underline;
+position:absolute;
+top:20px;
+left:40px;
+font-size: 22px;
+transition: 0.3s;
+}
+
+.voltar:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 1000px) {
+  .contato-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 45px;
+    padding: 90px 24px 50px;
+  }
+
+  .contato-esquerda,
+  .contato-direita {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .contato-esquerda h1 {
+    font-size: 70px;
+  }
+
+  .contato-box {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .voltar {
+    top: 24px;
+    left: 24px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contato-container {
+    padding: 78px 14px 35px;
+    gap: 30px;
+  }
+
+  .contato-esquerda h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
+
+  .subtitulo {
+    font-size: 12px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .form-contato {
+    gap: 14px;
+  }
+
+  .form-contato label {
+    font-size: 15px;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    padding: 13px 14px;
+    font-size: 15px;
+    border-radius: 16px;
+  }
+
+  .form-contato textarea {
+    min-height: 140px;
+  }
+
+  .form-contato button {
+    font-size: 15px;
+    padding: 10px 24px;
+    border-radius: 26px;
+  }
+
+  .contato-box {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .contato-box h2 {
+    font-size: 34px;
+    margin-bottom: 14px;
+  }
+
+  .contato-box ul {
+    padding-left: 20px;
+  }
+
+  .contato-box li {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .mensagem-enviada {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .voltar {
+    top: 14px;
+    left: 14px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .contato-container {
+    padding: 72px 12px 28px;
+  }
+
+  .contato-esquerda h1 {
+    font-size: 44px;
+  }
+
+  .subtitulo {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+
+  .form-contato button {
+    font-size: 14px;
+    padding: 9px 20px;
+  }
+
+  .contato-box {
+    padding: 20px 16px;
+  }
+
+  .contato-box h2 {
+    font-size: 28px;
+  }
+
+  .contato-box li {
+    font-size: 14px;
+  }
+
+  .voltar {
+    font-size: 15px;
+  }
+}
