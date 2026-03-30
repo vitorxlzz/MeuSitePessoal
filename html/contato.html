@@ -29,8 +29,6 @@
         <label for="mensagem">Mensagem</label>
         <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-        <input type="file" id="arquivo" name="arquivo">
-
         <button type="submit">Enviar</button>
 
         <p id="mensagem-enviada" class="mensagem-enviada" style="display: none;"></p>
@@ -53,37 +51,37 @@
   </main>
 
   <script>
-    const form = document.getElementById("formContato");
-    const mensagem = document.getElementById("mensagem-enviada");
+  const form = document.getElementById("formContato");
+  const mensagem = document.getElementById("mensagem-enviada");
 
-    form.addEventListener("submit", async function(event) {
-      event.preventDefault();
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
 
-      const formData = new FormData(form);
+    const formData = new FormData(form);
 
-      try {
-        const resposta = await fetch("https://formspree.io/f/mlgpowyg", {
-          method: "POST",
-          body: formData,
-          headers: {
-            Accept: "application/json"
-          }
-        });
-
-        if (resposta.ok) {
-          mensagem.textContent = "Mensagem enviada com sucesso!";
-          mensagem.style.display = "block";
-          form.reset();
-        } else {
-          mensagem.textContent = "Erro ao enviar. Tente novamente.";
-          mensagem.style.display = "block";
+    try {
+      const resposta = await fetch("https://formspree.io/f/mlgpowyg", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
         }
-      } catch (erro) {
-        mensagem.textContent = "Erro de conexão. Tente novamente.";
+      });
+
+      if (resposta.ok) {
+        mensagem.textContent = "Mensagem enviada com sucesso!";
+        mensagem.style.display = "block";
+        form.reset();
+      } else {
+        mensagem.textContent = "Erro ao enviar. Tente novamente.";
         mensagem.style.display = "block";
       }
-    });
-  </script>
+    } catch (erro) {
+      mensagem.textContent = "Erro de conexão. Tente novamente.";
+      mensagem.style.display = "block";
+    }
+  });
+</script>
 
 </body>
 </html>
